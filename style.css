@@ -1,0 +1,191 @@
+/* Reset e fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #f0f0f0;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Layout geral */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+/* Seções */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 260px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px #00ffffaa;
+}
+
+/* Tipografia */
+h2 {
+  color: #00ffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Dicas e Europa */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid #333;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding-bottom: 30%; /* Proporção 16:9 */
+  background-color: #000;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px; /* Bordas arredondadas para dar um toque mais suave */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7), 0 0 60px rgba(0, 255, 255, 0.7); /* Efeito neon */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.video-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.video-container .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/YouTube_play_button_%28black%29.svg/1200px-YouTube_play_button_%28black%29.svg.png') no-repeat center center;
+  background-size: 60%;
+  cursor: pointer;
+  z-index: 11;
+}
+
+
+
+
